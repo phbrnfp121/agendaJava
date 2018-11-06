@@ -20,8 +20,6 @@ class Heure {
      * ajoute une minute à l'instant considéré
      */
     public void plus1minute() {
-        // minute = minute + 1;
-        // minute += 1;
         minute ++;
         if (minute == 60) {
             minute = 0;
