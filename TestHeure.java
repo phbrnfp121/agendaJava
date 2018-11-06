@@ -20,4 +20,14 @@ public class TestHeure {
         h.plus1minute();
         assertEquals("00:00", h.toString());
     }
+    @Test
+    public void test03plus1heure() {
+        Heure h;
+        h = new Heure(10, 41);
+        h.plus1heure();
+        assertEquals("11:41", h.toString());
+        h = new Heure(23, 30);
+        h.plus1heure();
+        assertEquals("00:30", h.toString());
+    }
 }
