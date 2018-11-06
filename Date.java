@@ -4,7 +4,7 @@
  * @author LICINFO20182019
  * @version 2
  */
-public class Date {
+public class Date implements Comparable<Date> {
     private int jour;
     private int mois;
     private int annee;
@@ -109,5 +109,24 @@ public class Date {
         if (a % 400 == 0) return true;
         if (a % 4 == 0 && a % 100 != 0) return true;
         return false;
+    }
+    /**
+     * compare une date à une autre
+     * 
+     * @param autre une date
+     * @return un entier nul si le dates sont égales
+     * négatif si la date considérée est antérieure à autre,
+     * positif si la date considérée est postérieure à autre
+     */
+    public int compareA(Date autre) {
+        if (annee == autre.annee) {
+            if (mois == autre.mois) {
+                return jour - autre.jour;
+            } else {
+                return mois - autre.mois;
+            }
+        } else {
+            return annee - autre.annee;
+        }
     }
 }

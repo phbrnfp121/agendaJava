@@ -4,8 +4,7 @@
  * @author LICINFO20182019
  * @version 4
  */
-class Heure {
-    private int heure, minute;
+class Heure extends Temps {
     /**
      * initialise une heure
      * 
@@ -13,18 +12,7 @@ class Heure {
      * @param m un entier qui fixe la minute de l'heure considérée
      */
     public Heure(int h, int m) {
-        heure = h;
-        minute = m;
-    }
-    /**
-     * ajoute une minute à l'instant considéré
-     */
-    public void plus1minute() {
-        minute ++;
-        if (minute == 60) {
-            minute = 0;
-            plus1heure();
-        }
+        super(h, m);
     }
     /**
      * ajoute une heure à l'instant considéré

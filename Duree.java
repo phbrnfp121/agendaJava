@@ -4,8 +4,7 @@
  * @author LICINFO20182019
  * @version 1
  */
-class Duree {
-    private int heure, minute;
+class Duree extends Temps {
     /**
      * initialise une durée
      * 
@@ -13,18 +12,7 @@ class Duree {
      * @param m un entier qui fixe la valeur minute de la durée
      */
     public Duree(int h, int m) {
-        heure = h;
-        minute = m;
-    }
-    /**
-     * ajoute une minute à la durée considérée
-     */
-    public void plus1minute() {
-        minute ++;
-        if (minute == 60) {
-            minute = 0;
-            plus1heure();
-        }
+        super(h, m);
     }
     /**
      * ajoute une heure à la durée considérée
@@ -40,7 +28,7 @@ class Duree {
     public String toString() {
         String s = "";
         s += heure;
-        s += ":";
+        s += "h";
         if (minute < 10) s += "0";
         s += minute;
         return s;
