@@ -1,0 +1,6 @@
+TITRE DU PROJET : DateEtHeure
+BUT POURSUIVI : illustrer la notion de caractéristique de classe
+VERSION ou DATE : 2 du 30/10/2018
+COMMENT INVOQUER CE PROJET :
+AUTEURS : LICINFO2018-2019
+INSTRUCTIONS Ŕ L'USAGER :
