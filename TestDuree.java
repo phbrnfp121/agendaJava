@@ -45,4 +45,23 @@ public class TestDuree {
         d = new Duree(0, 30);
         d.moins1heure();
     }
+    @Test
+    public void test06moins1minuteConditionNormale() throws ExceptionOperationImpossible {
+        Duree d;
+        d = new Duree(10, 41);
+        d.moins1minute();
+        assertEquals("10h40", d.toString());
+        d = new Duree(10, 0);
+        d.moins1minute();
+        assertEquals("9h59", d.toString());
+        d = new Duree(0, 1);
+        d.moins1minute();
+        assertEquals("0h00", d.toString());
+    }
+    @Test(expected=ExceptionOperationImpossible.class)
+    public void test07moins1minuteConditionAnormale() throws ExceptionOperationImpossible {
+        Duree d;
+        d = new Duree(0, 0);
+        d.moins1minute();
+    }
 }

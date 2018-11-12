@@ -15,6 +15,17 @@ class Heure extends Temps {
         super(h, m);
     }
     /**
+     * retranche une minute à l'heure considérée
+     */
+    public void moins1minute() {
+        if (minute > 0) {
+            minute --;
+        } else {
+            minute = 59;
+            moins1heure();
+        }
+    }
+    /**
      * ajoute une heure à l'instant considéré
      */
     public void plus1heure() {

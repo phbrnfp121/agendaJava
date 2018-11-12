@@ -27,6 +27,10 @@ abstract public class Temps implements Comparable<Temps> {
         }
     }
     /**
+     * retranche une minute au temps considéré
+     */
+    abstract public void moins1minute() throws ExceptionOperationImpossible;
+    /**
      * ajoute une heure au temps considéré
      */
     abstract public void plus1heure();

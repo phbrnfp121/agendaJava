@@ -15,6 +15,20 @@ class Duree extends Temps {
         super(h, m);
     }
     /**
+     * retranche une minute à la durée considérée
+     */
+    public void moins1minute() throws ExceptionOperationImpossible {
+        if (minute > 0) {
+            minute --;
+        } else {
+            if (heure > 0) {
+                minute = 59;
+                heure --;
+            } else
+                throw new ExceptionOperationImpossible("Tentative de retirer une minute à une durée trop petite ("+ this +") !");
+        }
+    }
+    /**
      * ajoute une heure à la durée considérée
      */
     public void plus1heure() {

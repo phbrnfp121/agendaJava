@@ -40,4 +40,17 @@ public class TestHeure {
         h.moins1heure();
         assertEquals("23:30", h.toString());
     }
+    @Test
+    public void test05moins1minute() {
+        Heure h;
+        h = new Heure(10, 41);
+        h.moins1minute();
+        assertEquals("10:40", h.toString());
+        h = new Heure(10, 00);
+        h.moins1minute();
+        assertEquals("09:59", h.toString());
+        h = new Heure(0, 00);
+        h.moins1minute();
+        assertEquals("23:59", h.toString());
+    }
 }
