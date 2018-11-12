@@ -2,7 +2,7 @@
  * Durée représente un laps de temps
  *
  * @author LICINFO20182019
- * @version 1
+ * @version 2
  */
 class Duree extends Temps {
     /**
@@ -23,11 +23,11 @@ class Duree extends Temps {
     /**
      * retranche une heure à la durée considérée
      */
-    public void moins1heure() {
+    public void moins1heure() throws ExceptionOperationImpossible {
         if (heure > 0)
             heure --;
         else
-            heure = ???????;
+            throw new ExceptionOperationImpossible("Tentative de retirer une heure à une durée trop petite ("+ this +") !");
     }
     /**
      * construit un texte notant la durée considérée
