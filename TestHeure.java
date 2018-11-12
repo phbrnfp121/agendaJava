@@ -28,6 +28,6 @@ public class TestHeure {
         assertEquals("11:41", h.toString());
         h = new Heure(23, 30);
         h.plus1heure();
-        assertEquals("00:30", h.toString());
+        assertEquals("00:30", h.toString());        
     }
 }

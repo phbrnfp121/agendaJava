@@ -2,10 +2,9 @@
  * Heure représente un instant de la journée
  *
  * @author LICINFO20182019
- * @version 4
+ * @version 5
  */
-class Heure {
-    private int heure, minute;
+class Heure extends Temps {
     /**
      * initialise une heure
      * 
@@ -13,20 +12,7 @@ class Heure {
      * @param m un entier qui fixe la minute de l'heure considérée
      */
     public Heure(int h, int m) {
-        heure = h;
-        minute = m;
-    }
-    /**
-     * ajoute une minute à l'instant considéré
-     */
-    public void plus1minute() {
-        // minute = minute + 1;
-        // minute += 1;
-        minute ++;
-        if (minute == 60) {
-            minute = 0;
-            plus1heure();
-        }
+        super(h, m);
     }
     /**
      * ajoute une heure à l'instant considéré
@@ -36,6 +22,15 @@ class Heure {
         if (heure == 24) {
             heure = 0;
         }
+    }
+    /**
+     * retranche une heure à l'instant considéré
+     */
+    public void moins1heure() {
+        if (heure > 0)
+            heure --;
+        else
+            heure = 23;
     }
     /**
      * construit un texte notant l'instant considéré
